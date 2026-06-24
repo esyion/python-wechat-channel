@@ -1,0 +1,48 @@
+[project]
+name = "python-wechat-channel"
+version = "0.1.0"
+description = "WeChat ilink protocol channel for Python — 微信 ilink 协议 SDK"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+authors = [
+    { name = "chario", email = "chario@example.com" }
+]
+keywords = ["wechat", "ilink", "weixin", "bot", "channel"]
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Intended Audience :: Developers",
+    "Topic :: Communications :: Chat",
+]
+
+dependencies = [
+    "httpx>=0.27.0",
+    "pycryptodome>=3.20.0",
+    "qrcode>=7.4.2",
+    "pydantic>=2.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+    "pytest-asyncio>=0.23.0",
+    "ruff>=0.4.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["wechat"]
+
+[tool.ruff]
+target-version = "py310"
+line-length = 100
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
