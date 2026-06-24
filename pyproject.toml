@@ -1,6 +1,6 @@
 [project]
 name = "python-wechat-channel"
-version = "0.1.0"
+version = "0.1.1"
 description = "WeChat ilink protocol channel for Python — 微信 ilink 协议 SDK"
 license = { text = "MIT" }
 requires-python = ">=3.10"
